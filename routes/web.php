@@ -14,3 +14,19 @@ Route::get('/bonjour', function () {
     ]);
 });
 
+Route::get('/bonjour/{prenom}', function($prenom) {
+
+    return view('bonjour', [
+        'prenom' => $prenom
+        
+    ]);
+}); 
+
+Route::get('/bonjour/{prenom}/{humeur}', function($prenom, $humeur) {
+
+
+    return view('bonjour', [
+        'prenom'=> $prenom ,
+        'humeur' => $humeur
+    ]);
+});                                              
